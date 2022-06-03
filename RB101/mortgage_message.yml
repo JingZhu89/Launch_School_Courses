@@ -1,0 +1,12 @@
+
+loan_amount: "what's the total amount of the loan"
+
+apr: "what's the annual percentage rate(APR) e.g. please enter 3 if it's 3%"
+
+invalid_number: "invalid number, please enter again"
+
+loan_duration: "what is the loan duration in years"
+
+
+
+
