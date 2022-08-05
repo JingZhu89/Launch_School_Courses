@@ -1,4 +1,3 @@
-=begin
 # cute angles 
 DEGREE = "\xC2\xB0"
 def dms(degree)
@@ -163,8 +162,6 @@ p include?([1,2,3,4,5], 6) == false
 p include?([], 3) == false
 p include?([nil], nil) == true
 p include?([], nil) == false
-
-=end
 
 # Right Triangles
 

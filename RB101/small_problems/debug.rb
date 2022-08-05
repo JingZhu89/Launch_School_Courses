@@ -1,4 +1,3 @@
-=begin
 # 1 
 def decrease(counter)
   counter -= 1
@@ -261,7 +260,6 @@ puts tfidf("some", document1, documents) # 0
 puts tfidf("some", document2, documents) # ~ 0.4
 puts tfidf("some", document3, documents) # ~ 0.4
 
-=end
 
 
 # 11

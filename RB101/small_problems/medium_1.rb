@@ -1,4 +1,4 @@
-=begin
+
 # Rotation (Part 1)
 def rotate_array(arr)
   rotated_arr = arr.slice(1, arr.size - 1)
@@ -218,7 +218,7 @@ end
 p fibonacci(20) == 6765
 p fibonacci(100) == 354224848179261915075
 p fibonacci(100_001) # => 4202692702.....8285979669707537501
-=end
+
 
 def fibonacci_last(num)
   first, second = [1, 1]

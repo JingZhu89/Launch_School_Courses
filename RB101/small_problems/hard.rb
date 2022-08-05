@@ -1,4 +1,4 @@
-=begin
+
 # madlibs
 ADJECTIVES = %w(quick lazy sleepy ugly)
 NOUNS = %w(fox dog head leg)
@@ -262,7 +262,7 @@ def merge_sort(arr)
 
   merge(sub_arr1, sub_arr2)
 end
-=end
+
 
 def egyptian(num)
   egyptian = []
