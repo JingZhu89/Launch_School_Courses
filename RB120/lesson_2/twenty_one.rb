@@ -143,10 +143,8 @@ class TWGame
   def deal_first_two_cards
     2.times do
       player.cards << deck.deal
-      # dealer.cards << deck.deal
+      dealer.cards << deck.deal
     end
-    dealer.cards << ['H', 'Ace']
-    dealer.cards << ['S', '9']
   end
 
   def player_play
