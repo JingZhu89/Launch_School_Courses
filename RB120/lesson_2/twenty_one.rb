@@ -138,7 +138,7 @@ class TWGame
   private
 
   attr_reader :player, :dealer
-  attr_accessor :participants, :deck, :dealer_turn
+  attr_accessor :deck, :dealer_turn
 
   def deal_first_two_cards
     2.times do
