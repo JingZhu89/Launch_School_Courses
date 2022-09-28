@@ -128,13 +128,6 @@ class TodoList
     new_list
   end
 
-  def find_by_title(str)
-    self.each do |todo|
-      return todo if todo.title == str
-    end
-    nil
-  end
-
   def all_done
     self.select {|todo| todo.done?}
   end
@@ -143,8 +136,17 @@ class TodoList
     self.select {|todo| !todo.done?}
   end
 
+  private
+
+  def find_by_title(str)
+    self.each do |todo|
+      return todo if todo.title == str
+    end
+    nil
+  end
+
   def mark_done(str)
-    find_by_title(str)&&find_by_title(str).done!
+    find_by_title(str) && find_by_title(str).done!
   end
 
   def mark_all_done
@@ -156,23 +158,3 @@ class TodoList
   end
 
 end
-
-
-
-todo1 = Todo.new("Buy milk")
-todo2 = Todo.new("Clean room")
-todo3 = Todo.new("Go to gym")
-list = TodoList.new("Today's Todos")
-list.add(todo1)
-list.add(todo2)
-list.add(todo3)
-
-list.each do |todo|
-  puts todo                   # calls Todo#to_s
-end
-
-todo1.done!
-
-results = list.select { |todo| todo.done? }    # you need to implement this method
-
-puts results.inspect
