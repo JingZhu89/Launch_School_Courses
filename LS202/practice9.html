@@ -1,0 +1,141 @@
+<!doctype html>
+<html>
+    <head>
+      <title>Nutritional Facts Label</title>
+      <meta charset="utf-8">
+      <style>
+        html, body {
+          font: 28px Helvetica, Arial, sans-serif;
+          background: #ffffff;
+        }
+
+        article {
+          border: 2px solid black;
+          padding: 10px 15px 15px 15px;
+          width: 680px;
+          box-sizing: border-box;
+        }
+
+        header {
+          margin-bottom: 10px;
+          border-bottom: 15px solid #000000;
+        }
+
+        h1 {
+          padding: 0;
+          margin: 0;
+          font-size: 2rem;
+        }
+
+        h2 {
+          padding: 10px 0;
+          margin: 5px 0 0 0;
+          border-top: 30px solid #000000;
+          border-bottom:1px solid #000000;
+          font-size: 1rem;
+        }
+
+
+        dl {
+          padding: 0;
+          margin: 0;
+        }
+
+        dd {
+          display: inline;
+          margin: 0;
+        }
+
+        dt {
+          display: inline;
+          font-weight: 600;
+          margin: 0;
+        }
+
+        header dl {
+          display: inline-block;
+          width: 50%;
+          padding: 5px 0;
+        }
+
+        header p{
+          margin: 0;
+        }
+
+        header dl + dl {text-align: right;}
+        header dl + dl dt {font-weight: 500;}
+
+        table {
+          width: 100%;
+        }
+
+        
+        td {
+          text-align: right;
+          border-bottom: 1px solid black;
+        }
+
+        [scope="col"] {
+          text-align: right;
+          border-bottom: 1px solid black;
+        }
+
+        [scope="row"] {
+          text-align: left;
+          border-bottom: 1px solid black;
+        }
+
+
+      </style>
+    </head>
+    <body>
+      <article>
+        <header>
+          <h1>Nutrition Facts</h1>
+          <p>Serving Size 2/3 cup (55g)</p>
+          <p>Servings Per Container About 8
+          <h2>Amount Per Serving</h2>
+          <dl>
+            <dt>Calories</dt>
+            <dd>230</dd>
+          </dl><dl>
+            <dt>Calories from Fat</dt>
+            <dd>40</dd>
+          </dl>
+        </header>
+        <table>
+          <thead>
+            <tr>
+              <th scope="col"></th>
+              <th scope="col">% Daily Value*</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">
+                <dl>
+                  <dt>Total Fat</dt>
+                  <dd>8g</dd>
+                </dl>
+              </th>
+              <td>12%</td>
+            </tr>
+            <tr>
+              <th scope="row" class="indent">
+                <dl>
+                  <dt>Saturated Fat</dt>
+                  <dd>1g</dd>
+                </dl>
+                <dl>
+                  <dt>Trans Fat</dt>
+                  <dd>0g</dd>
+                </dl>
+              </th>
+              <td>12%</td>
+            </tr>
+          </tbody>
+        </table>
+      </article>
+
+  </body>
+</html>

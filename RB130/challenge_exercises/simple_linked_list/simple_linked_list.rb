@@ -23,11 +23,14 @@
   # A : element
 
 
-class Element
+require 'pry'
 
+class Element
+  
   attr_reader :datum
 
   def initialize(datum, linked_element = nil)
+    binding.pry
     @datum = datum
     @linked_element = linked_element
   end
@@ -100,3 +103,5 @@ class SimpleLinkedList
     new_list
   end
 end
+
+Element.new(1)

@@ -1,0 +1,14 @@
+<h1><%= @title%></h1>
+<p>Email: <%= @user_email%></p>
+<p>Interests: <%= @user_interests%></p>
+
+<h2>Other Users</h2>
+<ul>
+  <% @other_users.each do |name| %>
+    <li>
+      <a href="/users/<%= name%>">
+        <%= name.capitalize%>
+      </a>
+    </li>
+  <% end %>
+</ul>

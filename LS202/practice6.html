@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+  <head>
+    <title>My Picture</title>
+    <meta charset="utf-8">
+    <style>
+      table{
+        text-align: left;
+        background-color: cyan;
+        border-collapse: collapse;
+      }
+      td {
+        background-color: orange;
+      }
+      
+      tbody tr:nth-child(2n+2) td{
+        background-color: yellow;
+      }
+    </style>
+  </head>
+  <body>
+    <table>
+      <thead>
+        <tr>
+          <th scope="col">Product</th>
+          <th scope="col">Quantity</th>
+          <th scope="col">Price</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">Apple</th>
+          <td>34</th>
+          <td>$3.99/lb</th>
+        </tr>
+        <tr>
+          <th scope="row">Banana</th>
+          <td>116</th>
+          <td>$1.69/lb</th>
+        </tr>
+        <tr>
+          <th scope="row">Carrot</th>
+          <td>42</th>
+          <td>$2.49/lb</th>
+        </tr>
+        <tr>
+          <th scope="row">Kiwi</th>
+          <td>18</th>
+          <td>$0.69ea</th>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>

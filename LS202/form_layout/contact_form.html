@@ -1,0 +1,197 @@
+<!doctype html>
+<html>
+    <head>
+      <title>Contact Form</title>
+      <meta charset="utf-8">
+      <style>
+        body{
+          font: normal 16px Helvetica, Arial, sans-serif;
+        }
+        
+        fieldset{
+          padding: 0;
+          border: none;
+          width:600px;
+          margin: 0 auto;
+        }
+
+        dd {
+          margin-left: 0;
+          margin-top: 5px;
+        }
+
+        dt {
+          margin-top: 20px;
+        }
+
+        input[type="text"],
+        input[type="email"]
+        {
+          width: 100%;
+          height: 30px;
+          padding: 0, 10px;
+          box-sizing: border-box;
+          font: normal 14px Helvetica, Arial, sans-serif;
+        }
+
+        textarea {
+          width: 100%;
+          resize: vertical;
+        }
+
+        .partial{
+          display: inline-block;
+          box-sizing: border-box;
+          width: 50%;
+        }
+        
+        .left {
+          padding-right: 2px;
+        }
+
+        .right {
+          padding-left: 2px;
+        }
+
+        .city, .state, .zip {
+          display: inline-block;
+          box-sizing: border-box;
+
+        }
+
+        .city {
+          width: 50%;
+          padding-right: 2px;
+        }
+
+        .state{
+          width: 10%;
+          padding-right: 2px;
+        }
+
+        .zip {
+          width: 40%;
+        }
+
+        select{
+          line-height: 30px;
+          height: 30px;
+          width: 100%;
+        }
+      </style>
+    </head>
+    <body>
+      <form action="#" method="post">
+        <fieldset>
+        <dl class="partial left">
+          <dt><label for="first-name">First Name</label></dt>
+          <dd><input type="text" name="first-name" id="first-name"></dd>
+        </dl><!--
+      --><dl class="partial right">
+          <dt><label for="last-name">Last Name</label></dt>
+          <dd><input type="text" name="last-name" id="last-name"></dd>
+        </dl>
+
+        <dl>
+          <dt><label for="email">Email Address</label></dt>
+          <dd><input type="email" name="email" id="email" placeholder="abc@gmail.com"></dd>
+        </dl>
+
+        <dl class="city">
+          <dt><label for="city">City</label></dt>
+          <dd><input type="text" name="city" id="city"></dd>
+        </dl><!--
+
+        --><dl class="state">
+          <dt><label for="state">State</label></dt>
+          <dd>
+            <select name="state" id="state">
+                <option selected>AK</option>
+                <option>AL</option>
+                <option>AR</option>
+                <option>AZ</option>
+                <option>CA</option>
+                <option>CO</option>
+                <option>CT</option>
+                <option>DC</option>
+                <option>DE</option>
+                <option>FL</option>
+                <option>GA</option>
+                <option>HI</option>
+                <option>IA</option>
+                <option>ID</option>
+                <option>IL</option>
+                <option>IN</option>
+                <option>KS</option>
+                <option>KY</option>
+                <option>LA</option>
+                <option>MA</option>
+                <option>MD</option>
+                <option>ME</option>
+                <option>MI</option>
+                <option>MN</option>
+                <option>MO</option>
+                <option>MS</option>
+                <option>MT</option>
+                <option>NC</option>
+                <option>ND</option>
+                <option>NE</option>
+                <option>NH</option>
+                <option>NJ</option>
+                <option>NM</option>
+                <option>NV</option>
+                <option>NY</option>
+                <option>OH</option>
+                <option>OK</option>
+                <option>OR</option>
+                <option>PA</option>
+                <option>RI</option>
+                <option>SC</option>
+                <option>SD</option>
+                <option>TN</option>
+                <option>TX</option>
+                <option>UT</option>
+                <option>VA</option>
+                <option>VT</option>
+                <option>WA</option>
+                <option>WI</option>
+                <option>WV</option>
+                <option>WY</option>
+            </select>
+          </dd>
+        </dl><!--
+
+        --><dl class="zip">
+          <dt><label for="zipcode">Zip Code</label></dt>
+          <dd><input type="text" name="zipcode" id="zipcode" pattern="[0-9]{5}" placeholder="00000"></dd>
+        </dl>
+
+        <dl>
+          <dt><label for="color">Which color do you like?</label></dt>
+          <dd><label><input type="radio" name="color" value="red">Red</label></dd>
+          <dd><label><input type="radio" name="color" value="white">White</label></dd>
+          <dd><label><input type="radio" name="color" value="blue">Blue</label></dd>
+          <dd><label><input type="radio" name="color" value="yellow">Yellow</label></dd>
+          <dd><label><input type="radio" name="color" value="black">Black</label></dd>
+        </dl>
+
+        <dl>
+          <dt><label for="language">Which language do you want to learn?</label></dt>
+            <dd><label><input type="checkbox" name="language" value="javascript">Javascript</label></dd>
+            <dd><label><input type="checkbox" name="language" value="ruby">Ruby</label></dd>
+            <dd><label><input type="checkbox" name="language" value="css">CSS</label></dd>
+            <dd><label><input type="checkbox" name="language" value="html">HTML</label></dd>
+            <dd><label><input type="checkbox" name="language" value="python">Python</label></dd>
+        </dl>
+
+        <dl>
+          <dt><label for="comment">Comments:</label></dt>
+          <dd><textarea rows="6" cols="80" placeholder="enter your comment here"></textarea></dd>
+        </dl>
+
+        <input type="hidden" value="2022-11-23" name="timestamp">
+        <input type="submit" value="Send">
+      </fieldset>
+      </form>
+    </body>
+</html>

@@ -1,0 +1,28 @@
+body {
+  background-color: #ffffe0;
+}
+
+p {
+  font-size: 24px;
+}
+
+h1 {
+  color: orange;
+  text-align: center;
+}
+
+em {
+  color: red; 
+}
+
+strong {
+  color: blue; 
+  text-decoration: underline;}
+
+.more-text {
+  color: gray;
+}
+
+#final-paragraph {
+  text-decoration: underline;
+}
