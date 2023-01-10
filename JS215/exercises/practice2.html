@@ -1,0 +1,40 @@
+<script>
+//Problem 1
+//Given an array of integers, nums, return the third largest number in the array. If the third largest number does not exist, return the greatest number.
+//You are not allowed to sort the array.
+// P: input is an array of itegers 
+  //(valid integers? null undefined NaN?  empty array? duplicate numbers if the third largest is duplicate number display one or all?, negative numbers?)
+  // output is the third largest number in the array, if there are multiples, display it once;
+// D: array
+// A: 
+//    use slice to duplicate the array
+//    use Math.max on the array and find the max number
+//    use map()  to change all max number in the array to -infinity
+//    repeat the previous process to change the second larges to -infinity
+//    use max to find the third max number
+
+function thirdMax(arr) {
+  let max = Math.max(...arr);
+  maxRemoved = removeMax(arr, max);
+  let secondMax = Math.max(...maxRemoved);
+  sencondMaxRemoved = removeMax(maxRemoved, secondMax)
+  return Math.max(...sencondMaxRemoved);
+}
+
+function removeMax(arr, max) {
+  return arr.map(num => {
+    if (num === max) {
+      return -Infinity
+    } else {
+      return num
+    }
+  });
+}
+
+console.log(thirdMax([3, 2, 1])); // 1
+console.log(thirdMax([3, 2, 1, 4, 2])); // 2
+console.log(thirdMax([1, 1, 1, 1, 1])); // 
+console.log(thirdMax([5, 4])); // 
+console.log(thirdMax([])); // ?
+
+// </script>

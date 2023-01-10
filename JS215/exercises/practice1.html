@@ -1,0 +1,58 @@
+<script>
+//Problem 1
+//A distinct string is a string that is present only once in an array. ​ 
+//Given an array of strings, arr, and an integer, k, return the kth distinct string present in arr. 
+//If there are fewer than k distinct strings, return an empty string "". ​ Note that the result string is the one encountered earliest in the array.
+
+//P input array of strings and a integer (k), return, kth distinct string in arr or '' if 
+//E (["d","b","c","b","c","a"], 2 ) d distinct b not, c not b not c not a distinct
+//D string
+//A 
+  //- initiate a counter = 0
+  //- iterate through the string using for
+  //- for each element in the string
+//--helper-- input is 1 element and a string
+  //- check the number of occurance using match (g) length
+  //- if the length is > 1 it's not distinct return false
+  //- if the length is === 1 it is distinct return true
+  /// if distinct increment the counter for dictintc by 1
+  //- if the counter is = 2 return with that element
+  //- return ""
+
+function distinctString(arr, k) {
+  let arrStr = arr.join("");
+  let counter = 0;
+  for (let index = 0; index < arrStr.length; index += 1) {
+    let element = arrStr[index];
+    if (isDisticnt(element, arrStr)) {
+      counter += 1;
+    }
+    if (counter === k) return element
+  }
+  return ""
+}
+
+function isDisticnt(element, string) {
+  let regex = new RegExp(element, 'g');
+  let occurance = string.match(regex).length;
+  return occurance === 1;
+}
+
+// console.log(isDisticnt('b','abcde'));
+// console.log(isDisticnt('','abcde'));
+// console.log(isDisticnt('e','abcdee'));
+// console.log(isDisticnt('',''));
+// console.log(isDisticnt('',''));
+
+console.log(distinctString([], 1)); // ""
+console.log(distinctString([], 0)); // ""
+console.log(distinctString([""], 0)); // ""
+console.log(distinctString([""], 3)); // ""
+console.log(distinctString(["d"], 2)); // ""
+console.log(distinctString(["d","b","c","b","c"], 2)); // ""
+console.log(distinctString(["d","b","c","b","C"], 2)); // "c"
+console.log(distinctString(["d","b","c","b","c","a"], 2)); // "a"
+console.log(distinctString(["d","b","c","b","c","a"], 0)); // ""
+console.log(distinctString(["d","b","c","b","c","a","e"], 2)); // "a"
+console.log(distinctString(["d","b","c","b","c","a","e"], 3)); // "e"
+// </script>

@@ -8,9 +8,8 @@ let words = [
 ];
 
 console.log(allMatches(words, /lab/)); // => ['laboratory', 'flab', 'elaborate']
-function allMatches(words, regex){ 
+function allMatches(words, regex) {
   return words.filter(function(word) {
-    return regex.test(word)
-  })
-
+    return regex.test(word);
+  });
 }

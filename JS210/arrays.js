@@ -185,18 +185,84 @@
 
 // console.log(lastElementOf(['U', 'S', 'A']));  // returns "A"
 
-function nthElementOf(arr, index) {
-  return arr[index]
-}
+// function nthElementOf(arr, index) {
+//   return arr[index]
+// }
 
-let digits = [4, 8, 15, 16, 23, 42];
+// let digits = [4, 8, 15, 16, 23, 42];
 
-console.log(nthElementOf(digits, 3));   // returns 16
-console.log(nthElementOf(digits, 8));   // what does this return?
-console.log(nthElementOf(digits, -1));  // what does this return?
+// console.log(nthElementOf(digits, 3));   // returns 16
+// console.log(nthElementOf(digits, 8));   // what does this return?
+// console.log(nthElementOf(digits, -1));  // what does this return?
 
-digits[-1] = -42;
-console.log(nthElementOf(digits, -1));
-console.log(digits[-1]);
-console.log(digits['-1']);    // Note that we are using a string here
-console.log(digits.length)
+// digits[-1] = -42;
+// console.log(nthElementOf(digits, -1));
+// console.log(digits[-1]);
+// console.log(digits['-1']);    // Note that we are using a string here
+// console.log(digits.length)
+
+// function oddElementsOf(arr) {
+//   let newArr = []
+//   for (let index = 1; index < arr.length; index += 2) {
+//     newArr.push(arr[index]);
+//   }
+//   return newArr;
+// }
+
+// let digits = [4, 8, 15, 16, 23, 42];
+
+// // console.log(oddElementsOf(digits));    // returns [8, 16, 42]
+
+// function copyAndReverse(arr) {
+//   let newArr = arr.slice(0);
+//   let reverseArr = arr.slice(0).reverse()
+//   return newArr.concat(reverseArr)
+// }
+
+// console.log(copyAndReverse(digits))
+
+// function sortDescending(arr) {
+//   return arr.slice().sort((a, b) => b - a)
+// }
+
+// let array = [23, 4, 16, 42, 8, 15];
+// let result = sortDescending(array);  // returns [42, 23, 16, 15, 8, 4]
+// console.log(result);                 // logs    [42, 23, 16, 15, 8, 4]
+// console.log(array);                  // logs    [23, 4, 16, 42, 8, 15]
+
+// function matrixSums(arr) {
+//   return arr.map (subarr => {
+//     return subarr.reduce((accumulator, element) => accumulator + element , 0)
+//   })
+// }
+
+// console.log(matrixSums([[2, 8, 5], [12, 48, 0], [12]]));  // returns [15, 60, 12]
+
+// function uniqueElements(arr) {
+//   let newArr = [];
+//   for (let index = 0; index < arr.length; index++) {
+//     if (!newArr.includes(arr[index])) {
+//       newArr.push(arr[index]);
+//     }
+//   }
+//   return newArr;
+// }
+
+// console.log(uniqueElements([1, 2, 4, 3, 4, 1, 5, 4]));  // returns [1, 2, 4, 3, 5]
+// function missing(array) {
+//   let sortedArray = array.slice().sort((a,b) => a - b);
+//   let start = sortedArray[0];
+//   let end = sortedArray[sortedArray.length - 1];
+//   let result = []
+//   for (index = start; index < end; index +=1) {
+//     if (!sortedArray.includes(index)) {
+//       result.push(index)
+//     }
+//   }
+//   return result
+// }
+
+// console.log(missing([-3, -2, 1, 5]));                  // [-1, 0, 2, 3, 4]
+// console.log(missing([1, 2, 3, 4]));                    // []
+// console.log(missing([1, 5]));                          // [2, 3, 4]
+// console.log(missing([6]));                             // []

@@ -1,0 +1,51 @@
+<script>
+//Write a function, primeNumberPrinter, that prints all prime numbers present as substrings in a given string.
+  // input: string (input always one string? can it have special characters, can it have negative numbers? is it possible to have NaN) does the order of th output matter
+  // consecutive numbers are treated as 1 number
+  // Output
+  // if no prime numebr return an empty array
+  // if there are prime numbers return the prime numbers in an array
+  // if there are - in front of numbers treat them as negative numbers
+// D: numbers => array
+// A: use match(regex) to return all the numbers in the string. (arr) if null returns empty array
+//    initiate a result array =[]
+
+//    use map to convert the number strings to numbers in th numarray
+//    iterate through the numarray
+//    check if the number is a prime number if so add to the result array
+      // - helper isPrime function
+      // - take the input number i
+      // - iterate from 2 to i - 1 check if i % number === 0 if so return false
+      // - after iteration, return true
+//    return the result arr
+
+function primeNumberPrinter(str) {
+  let numbers = str.match(/\d+/g);
+  if (!numbers) return [];
+  let result = [];
+  numbers = numbers.map(numStr => Number(numStr));
+  numbers.forEach(num => {
+    if (isPrime(num)) {
+      result.push(num)
+    }
+  });
+  return result;
+}
+
+
+function isPrime(num) {
+  if (num <= 1) return false;
+  for (let index = 2; index <= num - 1; index += 1) {
+    if (num % index === 0) return false;
+  }
+  return true;
+}
+
+console.log(primeNumberPrinter("a4bc2k13d")); // [2, 13]
+console.log(primeNumberPrinter("a4bc2k-13d")); // [2, 13]
+console.log(primeNumberPrinter("")); // []
+console.log(primeNumberPrinter("a4bc2k@13d")); // [2, 13]
+console.log(primeNumberPrinter("a4bc8k@10d")); // []
+console.log(primeNumberPrinter("abck@d")); // []
+console.log(primeNumberPrinter("abck@35.2d")); // [2]
+</script>
