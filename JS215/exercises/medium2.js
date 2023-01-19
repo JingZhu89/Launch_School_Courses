@@ -259,30 +259,30 @@
 // console.log(sumSquareDifference(1));      // 0 -- (1)**2 - (1**2) 
 // console.log(sumSquareDifference(100));    // 25164150
 
-function bubbleSort(arr) {
-  let swap
-  do {
-    swap = false
-    for (let index = 0; index < arr.length - 1; index += 1) {
-      if (arr[index] > arr[index + 1]){
-        arr.splice(index + 2, 0, arr[index]);
-        arr.splice(index, 1);
-        swap = true;
-      }
-    } 
-  } while(swap === true);
-  return arr
-}
+// function bubbleSort(arr) {
+//   let swap
+//   do {
+//     swap = false
+//     for (let index = 0; index < arr.length - 1; index += 1) {
+//       if (arr[index] > arr[index + 1]){
+//         arr.splice(index + 2, 0, arr[index]);
+//         arr.splice(index, 1);
+//         swap = true;
+//       }
+//     } 
+//   } while(swap === true);
+//   return arr
+// }
 
 
-const array1 = [5, 3];
-bubbleSort(array1);
-console.log(array1);    // [3, 5]
+// const array1 = [5, 3];
+// bubbleSort(array1);
+// console.log(array1);    // [3, 5]
 
-const array2 = [6, 2, 7, 1, 4];
-bubbleSort(array2);
-console.log(array2);    // [1, 2, 4, 6, 7]
+// const array2 = [6, 2, 7, 1, 4];
+// bubbleSort(array2);
+// console.log(array2);    // [1, 2, 4, 6, 7]
 
-const array3 = ['Sue', 'Pete', 'Alice', 'Tyler', 'Rachel', 'Kim', 'Bonnie'];
-bubbleSort(array3);
-console.log(array3);    // ["Alice", "Bonnie", "Kim", "Pete", "Rachel", "Sue", "Tyler"]
+// const array3 = ['Sue', 'Pete', 'Alice', 'Tyler', 'Rachel', 'Kim', 'Bonnie'];
+// bubbleSort(array3);
+// console.log(array3);    // ["Alice", "Bonnie", "Kim", "Pete", "Rachel", "Sue", "Tyler"]
