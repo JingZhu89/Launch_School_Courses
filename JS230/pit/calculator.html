@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      body {
+        background-color: darkred;
+      }
+      div {
+        background: #ffffff;
+        box-sizing: border-box;
+        display: block;
+        margin: 0 auto;
+        max-width: 500px;
+        padding: 20px;
+      }
+      input[type="number"] {
+        border: 1px solid #cccccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+        font: normal 24px monospace;
+        height: 30px;
+        vertical-align: middle;
+        width: 80px;
+      }
+      input[type="submit"] {
+        background: linear-gradient(to bottom, #f0f0f0 0%, #d5d5d5 100%);
+        border: 1px solid #cccccc;
+        border-radius: 4px;
+        height: 30px;
+        width: 30px;
+      }
+      p {
+        color: #16997c;
+        font: normal 40px monospace;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="calculator">
+      <p id="result"></p>
+      <form action method="post">
+        <input type="number" id="left" name="left">
+        <select id="operator" name="operator">
+          <option>+</option>
+          <option>-</option>
+          <option>*</option>
+          <option>/</option>
+        </select>
+        <input type="number" id="right" name="right">
+        <input type="submit" value="=">
+      </form>
+    </div>
+  </body>
+  <script src="calculator.js"></script>
+</html>

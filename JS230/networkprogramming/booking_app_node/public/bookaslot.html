@@ -1,0 +1,25 @@
+<html>
+  <head>
+    <style>
+      #student {
+        background-color: lightgrey;
+      }
+    </style>
+  </head>
+  <body>
+    <form action="/api/bookings" method="post" id="book">
+      <h1>Schedules</h1>
+      <label for="schedule">
+        Please select one schedule:
+        <select id="schedule" name="schedule">
+        </select>
+      </label>
+      <label for="email">
+        Email:
+        <input type="email" id="email" name="email">
+      </label>
+      <input type="submit">
+    </form>
+  </body>
+<script src="/javascripts/bookaslot.js" ></script>
+</html>

@@ -1,0 +1,67 @@
+<html>
+  <head>
+    <style>
+     fieldset {
+      border: 3px double #ccc;
+     }
+     dl {
+
+         padding: 0.5em;
+     }
+     dt {
+         float: left;
+         clear: left;
+         width: 100px;
+         text-align: right;
+         font-weight: bold;
+         color: #f0595b;
+     }
+     dt::after {
+         content: ":";
+     }
+     dd {
+         margin: 0 0 0 110px;
+         padding: 0 0 0.5em 0;
+     }
+
+     input[type="submit"] {
+         color: #fff;
+         background: #f0595b;
+         border-color: #f0595b;
+         border-radius: 5px;
+         width: 100px;
+         height: 50px;
+    }
+    </style>
+  </head>
+  
+  <form method="post" action="/api/staff_members">
+    <button>Add New Schedule</button>
+    <fieldset>
+      <legend class="schedule">Schedule1</legend>
+      <dl>
+        <dt>
+          <label for="schedule1staff">Staff Name</label>
+        </dt>
+        <dd>
+          <select id="schedule1staff" name="staff">
+          </select>
+        </dd>
+        <dt>
+          <label for="schedule1date">Date</label>
+        </dt>
+        <dd>
+          <input type="date" id="schedule1date" name="date">
+        </dd>
+        <dt>
+          <label for="schedule1time">Time</label>
+        </dt>
+        <dd>
+          <input type="time" id="schedule1time" name="time">
+        </dd>
+      </dl>
+    </fieldset>
+    <input type="submit">
+  </form>
+<script src="/javascripts/addschedule.js" ></script>
+</html>

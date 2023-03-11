@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Contact Manager</title>
+  <script src="/javascripts/jquery.js"></script>
+  <script src="/javascripts/handlebars.js"></script>
+  <script src="/javascripts/app.js"></script>
+  <style>
+    .hidden {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <h1>Contact Manager</h1>
+  <main>
+    <a href="#" id="addContact">Add Contact</a>
+  </main>
+  <form action="http://localhost:3000/api/contacts/" class="hidden">
+    <fieldset>
+      <dl>
+        <dt><label for="name">Full Name</label></dt>
+        <dd><input type="text" id="name" name="name"></dd>
+      </dl>
+      <dl class="email">
+        <dt><label for="email">Email Address</label></dt>
+        <dd>
+          <input type="email" id="email" name="email">
+        </dd>
+      </dl>
+  
+      <dl class="phone">
+        <dt><label for="phone">Phone</label></dt>
+        <dd><input type="number" id="phone" name="phone"></dd>
+      </dl>
+      <dl>
+        <dt><label for="tag">Tag</label></dt>
+        <dd><input type="text" id="tag" name="tag"></dd>
+      </dl>
+      <input type="submit" value="Submit"><a href="#" id="cancel">Cancel</a>
+    </fieldset>
+  </form>  
+</body>
+  <script id='contactTemplate' type='text/x-handlebars'>
+    {{#each contact}}
+    <div class="contact">
+      <h3>{{name}}</h3>
+      <dl>
+        <dt>Email Address:</dt>
+        <dd>{{email}}</dd>
+        <dt>Phone Number:</dt>
+        <dd>{{number}}}</dd>
+      </dl>
+    </div>
+    {{/each}}
+  </script>
+</html>

@@ -1,0 +1,97 @@
+<head>
+  <style>
+    #elem1 {
+      background-color: green;
+      position: relative;
+      width: 200px;
+      height: 200px;
+      text-align: center;
+      cursor: pointer;
+    }
+
+    #elem2 {
+      background-color: blue;
+      position: absolute;
+      top: 25px;
+      left: 25px;
+      width: 150px;
+      height: 150px;
+    }
+
+    #elem3 {
+      background-color: red;
+      position: absolute;
+      top: 25px;
+      left: 25px;
+      width: 50px;
+      height: 100px;
+      line-height: 25px;
+    }
+
+    #elem5 {
+      background-color: orange;
+      position: absolute;
+      top: 25px;
+      left: 75px;
+      width: 50px;
+      height: 100px;
+      line-height: 25px;
+    }
+
+    #elem6 {
+      background-color: teal;
+      position: absolute;
+      top: 25px;
+      left: 0px;
+      width: 25px;
+      height: 50px;
+      line-height: 50px;
+    }
+
+    #elem4 {
+      background-color: yellow;
+      position: absolute;
+      top: 25px;
+      left: 25px;
+      width: 25px;
+      height: 50px;
+      line-height: 50px;
+    }
+
+  </style>
+  <script>
+    addEventListener("DOMContentLoaded", ()=>{
+    let elem1 = document.querySelector('#elem1');
+    let elem4 = document.querySelector('#elem4');
+
+    elem2.addEventListener('click', function(event) {
+      console.log(this);
+    }, true);
+    elem4.addEventListener('click', event => alert(event.currentTarget.id));
+
+    let n = setInterval(()=>{
+      console.log('test');
+    }, 1000);
+
+    console.log(n);
+
+    setTimeout(()=>{
+      clearInterval(n);
+    console.log(n)}, 5000
+    );
+
+    })
+  </script>
+</head>
+<div id="elem1">1
+  <div id="elem2">2
+    <div id="elem3">3
+      <div id="elem4">4
+      </div>
+    </div>
+    <div id="elem5">5
+      <div id="elem6">6
+      </div>
+    </div>
+  </div>
+</div>

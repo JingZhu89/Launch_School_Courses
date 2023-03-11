@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      dd {
+        margin-left: 0;
+        margin-bottom: 10px;
+      }
+    </style>
+    <script>
+    </script>
+  </head>
+  <form>
+    <fieldset>
+      <dl>
+        <dt>
+          <label for="first_name">First Name</label>
+        </dt>
+        <dd>
+          <input type="text" id="first_name" name="first_name" novalidate required>
+          <span class="error">
+        </dd>
+
+        <dt>
+          <label for="last_name">Last Name</label>
+        </dt>
+        <dd>
+          <input type="text" id="last_name" name="last_name" novalidate required>
+          <span class="error">
+        </dd>
+
+        <dt>
+          <label for="Email">Email</label>
+        </dt>
+        <dd>
+          <input type="email" id="email" name="email" placeholder="example@gmail.com" novalidate required pattern]=".+@.+">
+          <span class="error">
+        </dd>
+
+        <dt>
+          <label for="password">Password</label>
+        </dt>
+        <dd>
+          <input type="password" id="password" name="password" novalidate required minlength="10">
+          <span class="error">
+        </dd>
+
+        <dt>
+          <label for="phone">Phone</label>
+        </dt>
+        <dd>
+          <input type="number" id="phone" name="phone" placeholder="123-456-7890" novalidate pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}">
+          <span class="error">
+        </dd>
+
+        <input type="submit" value="Sign Up">
+        
+      </dl>
+
+
+
+
+
+
+
+    </fieldset>
+  </form>
+</html>
